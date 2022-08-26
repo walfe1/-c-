@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS l
+
+#include <stdio.h>
+int main(void)
+{
+	int a = 1;
+	int b;
+	int c=1;
+	int d;     
+	scanf("%d", &b);
+	for (a = 1; a <= b; )//1*2*3*4 b=4 
+	{
+		
+		++a;
+		while (a > b)
+		{
+			printf("%d\n", c);
+			break;
+		}
+		c = c * a;
+		
+	}
+	printf("%d\n", a);
+	
+	return 0;
+}
