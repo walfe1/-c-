@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS l
+#include <stdio.h>
+#include<stdlib.h>
+#include<windows.h>
+#include<string.h>
+int main(void)
+{
+	char arr1[] = "It's the breeze ， It's the dew ， It's the blush ， It's not you .";
+	char arr2[] = "###################################################################";
+	int l = 0;
+	int r = strlen(arr1) - 1;
+	while (l <= r)
+	{
+		arr2[l] = arr1[l];
+		arr2[r] = arr1[r];
+		printf("%s\n", arr2);
+		Sleep(100);
+		while (l == 33)
+		{
+			printf("是清风，是朝露，是脸颊红红，是非你不可。");
+			Sleep(2500);
+			l++;
+		}
+		system("cls");
+		l++;
+		r--;	
+	}
+	return 0;
+}
