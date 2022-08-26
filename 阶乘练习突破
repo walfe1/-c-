@@ -24,3 +24,38 @@ int main(void)
 	
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#define _CRT_SECURE_NO_WARNINGS l
+
+#include <stdio.h>
+int main(void)
+{
+	int a = 1;
+	int b=10;
+	int c=1;
+	int d = 0;
+	int e=1;
+	for (a = 1; a < 10; )//1*2*3*4 b=4 
+	{
+		
+		++a;
+		d = e;
+		c = c * a;
+		
+		e/*新的和*/ = d/*旧的和*/ + c/*新的阶乘*/;
+	}
+	printf("%d\n", e);
+	
+	return 0;
