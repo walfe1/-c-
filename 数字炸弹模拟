@@ -1,0 +1,60 @@
+#define _CRT_SECURE_NO_WARNINGS l
+
+#include <stdio.h>
+#include<time.h>
+#include<stdlib.h>
+
+void game(void) {
+    int m = 0;
+    int n = 0;
+    m = rand();
+    m = rand() % 100 + 1;
+   
+    
+    while (1)
+    {
+        printf("请输入>:\n");
+        scanf("%d", &n);
+        if (n < m)
+        {
+            printf("输小了\n");
+        }
+        else if (m <n)
+        {
+            printf("输大了\n");
+        }
+        else
+        {
+            printf("输对了\n");
+            break;
+        }//选择后跳出循环开始下一局 （指的是跳出while循环而不是if if语句不需要跳出，本身是嵌套式循环选择）
+    }
+}
+int main(void)
+{
+    int a = 0; srand((unsigned int)time(NULL));//伪随机数函数（要引用库函数stdio.h 和 stdlib.h以及time.h）
+    do//(do while循环完全适用于游戏菜单模拟 先do再看判断条件决定是否跳出循环)
+    {
+       
+       
+        printf("******************************************\n");
+        printf("************猜数字游戏是否开始************\n");
+        printf("*********请输入>:  1.play   0.exit********\n");
+        printf("******************************************\n");
+        scanf("%d", &a);
+        switch (a)//(switch语句可以轻松避免乱输入的情况)
+        {
+        case 1:
+            game();
+            break;
+        case 0:
+            break;
+        default:
+            printf("选择错误\n");
+            break;
+        }
+        
+
+    } while (a );
+    return 0;
+}
